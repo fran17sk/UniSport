@@ -3,8 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UniSport.MainPage">
 
-    <StackLayout>
-        <Label Text="Hola Mundo"></Label>
+    <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="White">
+        <StackLayout VerticalOptions="FillAndExpand">
+            <FlexLayout Direction="Column" JustifyContent="Center" AlignItems="Center">
+                <Image Source="logo.png" WidthRequest="200" HeightRequest="200"/>
+                <Entry x:Name="user" FontSize="14" Placeholder="Usuario / Email" WidthRequest="300" IsVisible="true" TextColor="Black" HorizontalTextAlignment="Center"></Entry>
+                <Grid>
+                    <Entry x:Name="password" FontSize="14" Placeholder="Contraseña" IsPassword="True" WidthRequest="300" IsVisible="true" TextColor="Black" HorizontalTextAlignment="Center"></Entry>
+                    <Button x:Name="btnseepass" Clicked="btnseepass_Clicked" ImageSource="ojo.png" HorizontalOptions="End" BackgroundColor="Transparent" Margin="0,0,-25,0"/>
+                </Grid>
+
+                <Button x:Name="lblpss" Text="Olvidaste tu contraseña?" Clicked="lblpss_Clicked" Background="white" FontSize="8" TextColor="#4A4BBD"></Button>
+                <Button x:Name="btnlogin" Margin="0,20" Text="Ingresar" Clicked="btnlogin_Clicked" FontSize="12" TextColor="White" CornerRadius="10" BackgroundColor="#4A4BBD" WidthRequest="300"></Button>
+                <StackLayout>
+                    <FlexLayout JustifyContent="Center">
+                        <Label x:Name="lblsingin" Text="Aun no tienes cuenta?" TextColor="Black" FontSize="8"></Label>
+                        <Button x:Name="btnsingin" Text="Registrate" Clicked="btnsingin_Clicked" BackgroundColor="White" FontSize="8" Margin="0,-18" Padding="0,0,0,0" TextColor="#4A4BBD"></Button>
+                    </FlexLayout>
+                </StackLayout>
+                <Button x:Name="btnloginface" ImageSource="face.png" Clicked="btnloginface_Clicked" Margin="0,50,0,10" Text="Ingresar con facebook" FontSize="11" TextColor="White" CornerRadius="10" BackgroundColor="#3b5998" WidthRequest="300"></Button>
+                <Button x:Name="btnlogingoogle" ImageSource="google.png" Clicked="btnlogingoogle_Clicked" Margin="0,0" Text="Ingresar con google" FontSize="11" TextColor="Black" CornerRadius="10" BorderWidth="1" BorderColor="Black" BackgroundColor="White" WidthRequest="300"></Button>
+            </FlexLayout>
+        </StackLayout>
     </StackLayout>
 
+    
 </ContentPage>
