@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace UniSport
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Page1 : ContentPage
+    public partial class Page1 : TabbedPage
     {
         public Page1()
         {
