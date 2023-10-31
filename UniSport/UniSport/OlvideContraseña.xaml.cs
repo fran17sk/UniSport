@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+
 
 namespace UniSport
 {
@@ -17,5 +18,20 @@ namespace UniSport
 			InitializeComponent ();
             NavigationPage.SetHasNavigationBar(this, false);
         }
-	}
+
+        private void btncode_Clicked(object sender, EventArgs e)
+        {
+            
+            btncode.Text = "Procesando....";
+            EnviarMailRecPassword email = new EnviarMailRecPassword();
+            int numero = email.Enviar(mail.Text, "");
+            Navigation.PushAsync(new ConfirmarCodigo(mail.Text,numero));
+            btncode.Text = "Enviado";
+        }
+
+        private async void btncancel_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
+    }
 }
