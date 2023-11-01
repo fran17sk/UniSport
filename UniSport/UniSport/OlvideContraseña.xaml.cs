@@ -21,17 +21,29 @@ namespace UniSport
 
         private void btncode_Clicked(object sender, EventArgs e)
         {
-            
-            btncode.Text = "Procesando....";
-            EnviarMailRecPassword email = new EnviarMailRecPassword();
-            int numero = email.Enviar(mail.Text, "");
-            Navigation.PushAsync(new ConfirmarCodigo(mail.Text,numero));
-            btncode.Text = "Enviado";
+            if (mail.Text == "")
+            {
+                mail.Placeholder = "Por favor ingrese mail";
+            }
+            else
+            {
+                btncode.Text = "Procesando....";
+                EnviarMailRecPassword email = new EnviarMailRecPassword();
+                int numero = email.Enviar(mail.Text, "");
+                Navigation.PushAsync(new ConfirmarCodigo(mail.Text, numero));
+                btncode.Text = "Enviado";
+                
+            }
         }
 
         private async void btncancel_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopAsync();
+        }
+
+        private void btncancel_Clicked_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

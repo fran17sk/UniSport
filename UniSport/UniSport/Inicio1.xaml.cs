@@ -15,6 +15,7 @@ namespace UniSport
         public Inicio1()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }

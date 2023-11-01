@@ -16,5 +16,10 @@ namespace UniSport
         {
             InitializeComponent();
         }
+
+        private void btnlogout_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
+        }
     }
 }

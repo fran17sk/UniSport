@@ -1,16 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="UniSport.Inicio1"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="UniSport.Inicio1"
             xmlns:local ="clr-namespace:UniSport"
             BarBackgroundColor="#ffffff"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
             BarTextColor="#000000"
-           >
+            >
 
-    <local:Home/>
-    <local:Eventos/>
-    <local:Noticias/>
-    <local:Deportes/>
-    <local:Perfil/> 
+    <local:Home IconImageSource="Home.png"/>
+    <local:Eventos IconImageSource="eventos.png"/>
+    <local:Noticias IconImageSource="notis.png"/>
+    <local:Deportes IconImageSource="deportes.png"/>
+    <local:Perfil IconImageSource="perfil.png"/> 
  
 </TabbedPage>

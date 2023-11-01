@@ -4,13 +4,13 @@
              x:Class="UniSport.OlvideContraseña">
     <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="White">
         <StackLayout VerticalOptions="FillAndExpand">
-            <FlexLayout Direction="Column" JustifyContent="Center" AlignItems="Center">
+            <FlexLayout Direction="Column" JustifyContent="Center" AlignItems="Center" VerticalOptions="CenterAndExpand">
                 <Image Source="logo.png" WidthRequest="200" HeightRequest="200"/>
                 <Label Text="Confirmar correo electronico" FontSize="Title" FontFamily="Arial" TextColor="Black" Margin="0,0,0,30"></Label>
                 <Entry x:Name="mail" FontSize="14" Placeholder="Ingresar Email" WidthRequest="300" IsVisible="true" TextColor="Black" HorizontalTextAlignment="Center"></Entry>
                 <Button x:Name="btncode" Clicked="btncode_Clicked" Margin="0,20" Text="Enviar Codigo de Verificacion" FontSize="12" TextColor="White" CornerRadius="10" BackgroundColor="#4A4BBD" WidthRequest="300"></Button>
                
-                <Button x:Name="btncancel" Clicked="btncancel_Clicked" Margin="0,150" Text="Cancelar" FontSize="12" TextColor="White" CornerRadius="10" BackgroundColor="#4A4BBD" WidthRequest="300"></Button>
+                <Button x:Name="btncancel" Clicked="btncancel_Clicked" Margin="0,300,0,0" Text="Cancelar" FontSize="12" TextColor="White" CornerRadius="10" BackgroundColor="#4A4BBD" WidthRequest="300"></Button>
             </FlexLayout>
         </StackLayout>
     </StackLayout>

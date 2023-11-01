@@ -5,11 +5,11 @@
 
     <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="White">
         <StackLayout VerticalOptions="FillAndExpand">
-            <FlexLayout Direction="Column" JustifyContent="Center" AlignItems="Center">
+            <FlexLayout Direction="Column" JustifyContent="Center" AlignItems="Center" VerticalOptions="CenterAndExpand">
                 <Image Source="logo.png" WidthRequest="200" HeightRequest="200"/>
-                <Entry x:Name="user" FontSize="14" Placeholder="Usuario / Email" WidthRequest="300" IsVisible="true" TextColor="Black" HorizontalTextAlignment="Center"></Entry>
+                <Entry x:Name="user" FontSize="14" Placeholder="Usuario / Email" PlaceholderColor="Black" WidthRequest="300" IsVisible="true" TextColor="Black" HorizontalTextAlignment="Center"></Entry>
                 <Grid>
-                    <Entry x:Name="password" FontSize="14" Placeholder="Contraseña" IsPassword="True" WidthRequest="300" IsVisible="true" TextColor="Black" HorizontalTextAlignment="Center"></Entry>
+                    <Entry x:Name="password" FontSize="14" Placeholder="Contraseña" PlaceholderColor="Black" IsPassword="True" WidthRequest="300" IsVisible="true" TextColor="Black" HorizontalTextAlignment="Center"></Entry>
                     <Button x:Name="btnseepass" Clicked="btnseepass_Clicked" ImageSource="ojo.png" HorizontalOptions="End" BackgroundColor="Transparent" Margin="0,0,-25,0"/>
                 </Grid>
 

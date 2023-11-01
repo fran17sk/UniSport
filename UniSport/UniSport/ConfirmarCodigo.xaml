@@ -3,14 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UniSport.ConfirmarCodigo">
     <ContentPage.Content>
-        <StackLayout>
-            <FlexLayout Direction="Column" JustifyContent="Center" AlignItems="Center">
+        <StackLayout BackgroundColor="White">
+            <FlexLayout Direction="Column" JustifyContent="Center" AlignItems="Center" VerticalOptions="CenterAndExpand">
                 <Image Source="logo.png" WidthRequest="200" HeightRequest="200"/>
                 <Label Text="Confirmar correo electronico" FontSize="Title" FontFamily="Arial" TextColor="Black" Margin="0,0,0,30"></Label>
                 <Entry x:Name="codigo" FontSize="14" Placeholder="Ingresar codigo de verificacion" WidthRequest="300" IsVisible="true" TextColor="Black" HorizontalTextAlignment="Center"></Entry>
                 <Button x:Name="btnverificar" Clicked="btnverificar_Clicked" Margin="0,20" Text="Verificar" FontSize="12" TextColor="White" CornerRadius="10" BackgroundColor="#4A4BBD" WidthRequest="300"></Button>
                 <Button x:Name="btnreenviar" Text="Reenviar codigo de verificacion!" Clicked="btnreenviar_Clicked" Background="white" FontSize="8" TextColor="#4A4BBD"></Button>
-                
+                <Button x:Name="btncancel" Clicked="btncancel_Clicked" Margin="0,300,0,0" Text="Cancelar" FontSize="12" TextColor="White" CornerRadius="10" BackgroundColor="#4A4BBD" WidthRequest="300"></Button>
             </FlexLayout>
         </StackLayout>
     </ContentPage.Content>

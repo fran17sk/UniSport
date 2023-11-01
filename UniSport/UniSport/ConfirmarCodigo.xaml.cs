@@ -29,5 +29,11 @@ namespace UniSport
         {
             
         }
+
+        private async void btncancel_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+            await Navigation.PopAsync();
+        }
     }
 }
