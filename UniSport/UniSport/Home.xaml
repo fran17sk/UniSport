@@ -1,12 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="UniSport.Home">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+             x:Class="UniSport.Home"
+             Title="Home"
+             IconImageSource="">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Contenido de la primera columna -->
+        <StackLayout Grid.Column="0">
+            <Button Text="DEPORTES" FontFamily="Lato" BackgroundColor="#6BBAFF" Margin="8" WidthRequest="150" HeightRequest="165" FontAttributes="Bold" CornerRadius="12" TextColor="#ffffff"></Button>
+            <Button Text="EVENTOS" BackgroundColor="#7052FF" Margin="8" WidthRequest="150" HeightRequest="165" FontAttributes="Bold" CornerRadius="12" TextColor="#ffffff"></Button>
+           
+            <!-- Tus elementos para la primera columna -->
         </StackLayout>
-    </ContentPage.Content>
+
+        <!-- Contenido de la segunda columna -->
+        <StackLayout Grid.Column="1">
+            <Button Text="NOTICIAS" BackgroundColor="#FF5F5F" Margin="8" WidthRequest="150" HeightRequest="165" FontAttributes="Bold" CornerRadius="12" TextColor="#ffffff"></Button>
+            <Button Text="SALUD +" BackgroundColor="#FFA34A" Margin="8" WidthRequest="150" HeightRequest="165" FontAttributes="Bold" CornerRadius="12" TextColor="#ffffff"></Button>
+            <!-- Tus elementos para la segunda columna -->
+        </StackLayout>
+    </Grid>
 </ContentPage>

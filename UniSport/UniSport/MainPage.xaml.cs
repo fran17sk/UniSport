@@ -28,8 +28,10 @@ namespace UniSport
             }
         }
 
-        private void btnlogin_Clicked(object sender, EventArgs e)
+        private async void btnlogin_Clicked(object sender, EventArgs e)
         {
+            await Navigation.PushAsync(new Inicio1());
+
 
         }
 
