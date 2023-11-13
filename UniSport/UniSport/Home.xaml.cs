@@ -16,5 +16,12 @@ namespace UniSport
         {
             InitializeComponent();
         }
+        private async void btnNoticias_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Noticias());
+        }
+
     }
+
+
 }

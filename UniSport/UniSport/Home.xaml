@@ -20,7 +20,7 @@
 
         <!-- Contenido de la segunda columna -->
         <StackLayout Grid.Column="1">
-            <Button Text="NOTICIAS" BackgroundColor="#FF5F5F" Margin="8" WidthRequest="150" HeightRequest="165" FontAttributes="Bold" CornerRadius="12" TextColor="#ffffff"></Button>
+            <Button Text="NOTICIAS" Clicked="btnNoticias_Clicked" BackgroundColor="#FF5F5F" Margin="8" WidthRequest="150" HeightRequest="165" FontAttributes="Bold" CornerRadius="12" TextColor="#ffffff"></Button>
             <Button Text="SALUD +" BackgroundColor="#FFA34A" Margin="8" WidthRequest="150" HeightRequest="165" FontAttributes="Bold" CornerRadius="12" TextColor="#ffffff"></Button>
             <!-- Tus elementos para la segunda columna -->
         </StackLayout>

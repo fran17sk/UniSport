@@ -3,11 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UniSport.Noticias"
              Title="Noticias">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <StackLayout>
+        <!-- Image with Tap Gesture Recognizer -->
+        <Image Source="{Binding NoticiaImagen}">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ImageTappedCommand}" />
+            </Image.GestureRecognizers>
+        </Image>
+
+        <!-- Breaking News Title -->
+        <Label Text="Noticias" HorizontalOptions="Center" Margin="8" TextColor="#000000" FontSize="Title" TextDecorations="None"/>
+
+        <!-- News Cards -->
+        <CollectionView ItemsSource="{Binding NewsCollection}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Frame CornerRadius="10" HasShadow="True" Margin="10">
+                            <StackLayout>
+                                <Image Source="{Binding NoticiaImagen}" Aspect="AspectFill" HeightRequest="150" />
+                                <Label Text="{Binding NoticiaTitulo}" FontSize="20" FontAttributes="Bold" Margin="10,5,10,0" />
+                                <Label Text="{Binding NoticiaDescripcion}" FontSize="16" Margin="10,0,10,10" />
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
 </ContentPage>
