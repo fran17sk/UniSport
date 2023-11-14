@@ -4,9 +4,46 @@
              x:Class="UniSport.Perfil"
              Title="Perfil"
              >
-    <ContentPage.Content>
-        <StackLayout>
-            <Button x:Name="btnlogout" 
+
+
+    <ScrollView VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never">
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" Padding="15,0">
+            <!--Imagen -->
+            <Frame Grid.Row="0" BorderColor="White" VerticalOptions="Start" HeightRequest="160" HasShadow="False" CornerRadius="20" Margin="0,45,0,20" Padding="0" IsClippedToBounds="True">
+                <Image Source="https://img.freepik.com/foto-gratis/herramientas-deportivas_53876-138077.jpg" Aspect="AspectFill"/>
+            </Frame>
+
+            <!-- Perfil img-->
+            <Frame Grid.Row="1" Margin="0,-90,0,0" BorderColor="White" HorizontalOptions="Center" WidthRequest="110" HeightRequest="20" HasShadow="False" CornerRadius="55" Padding="0" IsClippedToBounds="True">
+                <Image Source="https://i.pinimg.com/236x/2a/2e/7f/2a2e7f0f60b750dfb36c15c268d0118d.jpg" Aspect="AspectFill"/>
+            </Frame>
+
+            <!-- nombre perfil-->
+            <Label Grid.Row="2" Text="Nombre Usuario" FontAttributes="Bold" TextColor="#383b67" HorizontalTextAlignment="Center" Margin="0,20,0,0" FontSize="22"/>
+
+            <Grid Grid.Row="3" ColumnDefinitions="Auto,Auto,Auto,Auto,Auto" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,20,0,0">
+                <Button Grid.Column="0" ImageSource="location" WidthRequest="18" HeightRequest="18" CornerRadius="9" HorizontalOptions="Center" BackgroundColor="#9192b7"/>
+                <Label Grid.Column="1" Text=" Salta, Argentina" FontSize="15" TextColor="#9192b7"/>
+                <Button Grid.Column="2" ImageSource="age" Margin="10,0,0,0" WidthRequest="18" HeightRequest="18" CornerRadius="9" HorizontalOptions="Center" BackgroundColor="#9192b7"/>
+                <Label Grid.Column="3" Text=" Edad, 22" FontSize="15" TextColor="#9192b7"/>
+            </Grid>
+
+            
+
+            <!-- Detalles del perfil -->
+            <StackLayout Grid.Row="5" Margin="15">
+                <Label Text="Información Personal" FontSize="18" FontAttributes="Bold" />
+                <Label Text="Correo Electrónico: usuario@universidad.com" FontSize="16" />
+                <Label Text="Fecha de Nacimiento: 01/01/1990" FontSize="16" />
+                <Label Text="Número de Teléfono: (123) 456-7890" FontSize="16" />
+            </StackLayout>
+
+            <!-- Botón para editar perfil -->
+            <Button Grid.Row="6"  Text="Editar Perfil" HorizontalOptions="FillAndExpand" FontSize="12" TextColor="White" CornerRadius="10" BackgroundColor="#4A4BBD" Margin="15,0,20,15" />
+
+
+            <StackLayout Grid.Row="7" Margin="15">
+                <Button x:Name="btnlogout" 
                     Margin="0,20" 
                     Text="Cerrar Sesion"
                     Clicked="btnlogout_Clicked"
@@ -15,6 +52,7 @@
                     CornerRadius="10"
                     BackgroundColor="#4A4BBD"
                     WidthRequest="300"></Button>
-        </StackLayout>
-    </ContentPage.Content>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
 </ContentPage>
