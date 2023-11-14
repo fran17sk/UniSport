@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,9 +16,14 @@ namespace UniSport
         public DetalleNoticia()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
 
-            // Enlazar los datos de la noticia seleccionada para mostrar el título, la imagen y los párrafos de la noticia
-            
+
+        }
+
+        private async void btnAtras_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
         }
     }
 }

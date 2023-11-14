@@ -3,12 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UniSport.EditarPerfil">
     <ContentPage.Content>
-        <StackLayout>
-            <!-- Agrega aquí tus controles para la edición del perfil -->
-            <Label Text="Editar Perfil" FontSize="20" />
-            <Entry Placeholder="Nombre" Text="{Binding Nombre}" />
-            <Entry Placeholder="Correo Electrónico" Text="{Binding Correo}" />
-            <Button Text="Guardar" />
+        <StackLayout VerticalOptions="FillAndExpand" BackgroundColor="White">
+            <StackLayout VerticalOptions="FillAndExpand">
+                <FlexLayout Direction="Column" JustifyContent="Center" AlignItems="Center" VerticalOptions="Start">
+                    <Image Source="logo.png" WidthRequest="200" HeightRequest="200"/>
+
+                    <Entry x:Name="nombre" Margin="0,30,0,10" FontSize="14" Placeholder="Francisco" PlaceholderColor="Black" WidthRequest="300" IsVisible="true" TextColor="Black" HorizontalTextAlignment="Center"></Entry>
+
+                    <Entry x:Name="apellido" Margin="0,0,0,10" FontSize="14" Placeholder="Cruz" PlaceholderColor="Black" WidthRequest="300" IsVisible="true" TextColor="Black" HorizontalTextAlignment="Center"></Entry>
+
+                    <Label x:Name="nacimiento" Margin="0,0,0,10" FontSize="14" Text="Fecha de Nacimiento: 06/09/2001" WidthRequest="300" IsVisible="true" TextColor="Black" HorizontalTextAlignment="Center"></Label>
+
+                    <Entry x:Name="facultad" Margin="0,0,0,10" FontSize="14" Placeholder="Facultad de Ingenieria" PlaceholderColor="Black" WidthRequest="300" IsVisible="true" TextColor="Black" HorizontalTextAlignment="Center"></Entry>
+
+                    <Entry x:Name="genero" Margin="0,0,0,10" FontSize="14" Placeholder="Masculino" PlaceholderColor="Black" WidthRequest="300" IsVisible="true" TextColor="Black" HorizontalTextAlignment="Center"></Entry>
+
+                    <Label x:Name="mail" Margin="0,0,0,10" FontSize="14" Text="Francis.cruz2@gmail.com" WidthRequest="300" IsVisible="true" TextColor="Black" HorizontalTextAlignment="Center"></Label>
+                    
+
+
+                    <Button x:Name="btnguardar"  Margin="0,20" Text="Guardar Cambios"  FontSize="12" TextColor="White" CornerRadius="10" BackgroundColor="#4A4BBD" WidthRequest="300"></Button>
+                    <Button x:Name="btncancel" Margin="0,20" Text="Cancelar"  FontSize="12" TextColor="White" CornerRadius="10" BackgroundColor="#4A4BBD" WidthRequest="300"></Button>
+                </FlexLayout>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

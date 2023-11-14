@@ -1,18 +1,63 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="UniSport.DetalleNoticia">
+             x:Class="UniSport.DetalleNoticia"
+             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="{Binding NoticiaTitulo}" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" Margin="10" />
-            <Image Source="{Binding NoticiaImagen}" Aspect="AspectFill" HeightRequest="200" />
-            <ScrollView>
-                <StackLayout>
-                    <Label Text="Contenido de la Noticia" FontSize="18" FontAttributes="Bold" Margin="10" />
-                    <Label Text="{Binding NoticiaDescripcion}" FontSize="16" Margin="10"/>
-                    <!-- Añade más etiquetas o elementos según sea necesario para mostrar el contenido completo -->
+        <ScrollView VerticalScrollBarVisibility="Never">
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,*" BackgroundColor="#F0F1F6">
+
+            <!-- 1.1 Imagen-->
+            <pancake:PancakeView Grid.Row="0" VerticalOptions="Start" IsClippedToBounds="True" CornerRadius="0,0,40,40" HorizontalOptions="FillAndExpand">
+                <Image Source="https://www.ucasal.edu.ar/wp-content/uploads/2023/05/WhatsApp-Image-2023-04-21-at-12.25.56-PM-2-1-copia.jpeg" Aspect="AspectFill" HeightRequest="370"/>
+            </pancake:PancakeView>
+            <!-- 1.1 Heart -->
+            <Image Grid.Row="0" Source="_Heart" Margin="0,35,20,0" HeightRequest="35" WidthRequest="35" HorizontalOptions="End" VerticalOptions="Start"/>
+
+            <!-- 2. Event Description -->
+
+            <!-- 2.1 Fashion Fair frame 2020-->
+            <Frame Grid.Row="1" BackgroundColor="White" HasShadow="False" Margin="30,-100,30,20" CornerRadius="20" HeightRequest="100">
+                <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,*,*">
+                    <!--Date Information frame-->
+                    <Frame Grid.Row="0" Grid.Column="0" Margin="10,0,15,0" WidthRequest="30" Padding="8,0" HasShadow="False" Grid.RowSpan="2" CornerRadius="25" BackgroundColor="#c7e7ff">
+                        <Label VerticalTextAlignment="Center" >
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Grid.Row="0" Text="NEWS" FontSize="12" FontAttributes="Bold" TextColor="#fc717a"/>
+                                    
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </Frame>
+                    <!--Nombre evento-->
+                    <Label Grid.Row="0" Grid.Column="1" FontAttributes="Bold" Text="El gran triunfo de UCASAL en los Juegos Universitarios Argentinos" FontSize="21"/>
+                        <Label Grid.Row="1" Grid.Column="1" Text="https://www.example.com/news1" TextColor="#a4a5b0"/>
+                    
+                </Grid>
+            </Frame>
+
+            <!-- Detalles-->
+            <Label Margin="30,0" Grid.Row="2" FontSize="22" Text="Detalles" FontAttributes="Bold"/>
+            <!-- Descripcion-->
+            <Label Margin="30,0" Grid.Row="3" TextColor="#5f6477" Text="Entre los días 18 y 21 de abril se desarrollaron en Salta los Juegos Universitarios Argentinos (JUAR), región Noa, siendo sede anfitriona la UNSA.\r\n\r\nEn esta edición, los equipos representativos de UCASAL se desempeñaron con éxito en varias disciplinas deportivas.Entre los días 18 y 21 de abril se desarrollaron en Salta los Juegos Universitarios Argentinos (JUAR), región Noa, siendo sede anfitriona la UNSA. &#10; \r\n\r\nEn esta edición, los equipos representativos de UCASAL se desempeñaron con éxito en varias disciplinas deportivas.Entre los días 18 y 21 de abril se desarrollaron en Salta los Juegos Universitarios Argentinos (JUAR), región Noa, siendo sede anfitriona la UNSA.\r\n\r\nEn esta edición, los equipos representativos de UCASAL se desempeñaron con éxito en varias disciplinas deportivas.Entre los días 18 y 21 de abril se desarrollaron en Salta los Juegos Universitarios Argentinos (JUAR), región Noa, siendo sede anfitriona la UNSA.\r\n\r\nEn esta edición, los equipos representativos de UCASAL se desempeñaron con éxito en varias disciplinas deportivas.Entre los días 18 y 21 de abril se desarrollaron en Salta los Juegos Universitarios Argentinos (JUAR), región Noa, siendo sede anfitriona la UNSA.\r\n\r\nEn esta edición, los equipos representativos de UCASAL se desempeñaron con éxito en varias disciplinas deportivas.Entre los días 18 y 21 de abril se desarrollaron en Salta los Juegos Universitarios Argentinos (JUAR), región Noa, siendo sede anfitriona la UNSA.\r\n\r\nEn esta edición, los equipos representativos de UCASAL se desempeñaron con éxito en varias disciplinas deportivas.Entre los días 18 y 21 de abril se desarrollaron en Salta los Juegos Universitarios Argentinos (JUAR), región Noa, siendo sede anfitriona la UNSA.\r\n\r\nEn esta edición, los equipos representativos de UCASAL se desempeñaron con éxito en varias disciplinas deportivas.Entre los días 18 y 21 de abril se desarrollaron en Salta los Juegos Universitarios Argentinos (JUAR), región Noa, siendo sede anfitriona la UNSA.\r\n\r\nEn esta edición, los equipos representativos de UCASAL se desempeñaron con éxito en varias disciplinas deportivas.Entre los días 18 y 21 de abril se desarrollaron en Salta los Juegos Universitarios Argentinos (JUAR), región Noa, siendo sede anfitriona la UNSA.\r\n\r\nEn esta edición, los equipos representativos de UCASAL se desempeñaron con éxito en varias disciplinas deportivas.Entre los días 18 y 21 de abril se desarrollaron en Salta los Juegos Universitarios Argentinos (JUAR), región Noa, siendo sede anfitriona la UNSA.\r\n\r\nEn esta edición, los equipos representativos de UCASAL se desempeñaron con éxito en varias disciplinas deportivas.Entre los días 18 y 21 de abril se desarrollaron en Salta los Juegos Universitarios Argentinos (JUAR), región Noa, siendo sede anfitriona la UNSA.\r\n\r\nEn esta edición, los equipos representativos de UCASAL se desempeñaron con éxito en varias disciplinas deportivas."/>
+            <!-- Mas-->
+            
+
+
+
+            <!--Nombre evento-->
+            <pancake:PancakeView Grid.Row="6"  BackgroundColor="#dddddd" VerticalOptions="EndAndExpand"  CornerRadius="40,40,0,0" HorizontalOptions="FillAndExpand" Margin="0,30 ,0,0">
+                <StackLayout HeightRequest="100" Orientation="Horizontal">
+                    <Label Margin="30,20" HorizontalOptions="StartAndExpand">
+                        
+                    </Label>
+                    <Button BackgroundColor="#4c4baa" x:Name="btnAtras" Clicked="btnAtras_Clicked" VerticalOptions="Center" HeightRequest="60" WidthRequest="130" Text="Atras" FontAttributes="Bold" TextColor="White" CornerRadius="25" Margin="0,0,20,0"/>
                 </StackLayout>
-            </ScrollView>
-        </StackLayout>
+            </pancake:PancakeView>
+
+        </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
+

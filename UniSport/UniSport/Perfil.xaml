@@ -19,7 +19,7 @@
             </Frame>
 
             <!-- nombre perfil-->
-            <Label Grid.Row="2" Text="Nombre Usuario" FontAttributes="Bold" TextColor="#383b67" HorizontalTextAlignment="Center" Margin="0,20,0,0" FontSize="22"/>
+            <Label Grid.Row="2" Text="Fran17Sk" FontAttributes="Bold" TextColor="White" HorizontalTextAlignment="Center" Margin="0,20,0,0" FontSize="26"/>
 
             <Grid Grid.Row="3" ColumnDefinitions="Auto,Auto,Auto,Auto,Auto" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,20,0,0">
                 <Button Grid.Column="0" ImageSource="location" WidthRequest="18" HeightRequest="18" CornerRadius="9" HorizontalOptions="Center" BackgroundColor="#9192b7"/>
@@ -31,12 +31,14 @@
             
 
             <!-- Detalles del perfil -->
-            <StackLayout Grid.Row="5" Margin="15">
+            <StackLayout Grid.Row="5" Margin="15" BackgroundColor="White" Padding="25">
+                
                 <Label Text="Información Personal" FontSize="18" FontAttributes="Bold" />
                 <Label Text="Correo Electrónico: usuario@universidad.com" FontSize="16" />
                 <Label Text="Fecha de Nacimiento: 01/01/1990" FontSize="16" />
                 <Label Text="Número de Teléfono: (123) 456-7890" FontSize="16" />
                 <Label Text="Carrera: Ingenieria Informatica" FontSize="16" />
+                
             </StackLayout>
 
             <!-- Botón para editar perfil -->

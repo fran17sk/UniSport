@@ -34,7 +34,7 @@
                         </Frame>
                         <!--Nombre evento-->
                         <Label Grid.Row="0" Grid.Column="1" FontAttributes="Bold" Text="Torneo de Futbol" FontSize="21"/>
-                        <Label Grid.Row="1" Grid.Column="1" Text="by UnoSport" TextColor="#a4a5b0"/>
+                        <Label Grid.Row="1" Grid.Column="1" Text="by UniSport" TextColor="#a4a5b0"/>
                         <!--Hora-->
                         <Image Grid.Row="2" Grid.Column="0" HorizontalOptions="Start" Source="Clock" Margin="13,0,0,0" HeightRequest="35"/>
                         <Label Grid.Row="2" Grid.Column="1" VerticalOptions="Center" Margin="-25,0,0,0" Text="08.00am - 18.00pm" FontSize="16" TextColor="#5855b6" FontAttributes="Bold"/>
@@ -73,7 +73,7 @@
 
                 <!-- 1.1 Imagen principal -->
                 <pancake:PancakeView Grid.Row="0" VerticalOptions="Start" IsClippedToBounds="True" CornerRadius="0,0,40,40" HorizontalOptions="FillAndExpand">
-                    <Image Source="https://img.freepik.com/foto-gratis/balon-futbol-linea-blanca-estadio_1150-5285.jpg" Aspect="AspectFill" HeightRequest="370"/>
+                    <Image Source="basket.jpg" Aspect="AspectFill" HeightRequest="370"/>
                 </pancake:PancakeView>
                 <!-- 1.1 Heart -->
                 <Image Grid.Row="0" Source="_Heart" Margin="0,35,20,0" HeightRequest="35" WidthRequest="35" HorizontalOptions="End" VerticalOptions="Start"/>
@@ -81,7 +81,7 @@
                 <!-- 2. Event Description -->
 
                 <!-- 2.1 Fashion Fair frame 2020-->
-                <Frame Grid.Row="1" BackgroundColor="White" HasShadow="False" Margin="30,-100,30,20" CornerRadius="20" HeightRequest="170">
+                <Frame Grid.Row="1" BackgroundColor="White" HasShadow="False" Margin="30,-100,30,20" CornerRadius="20" HeightRequest="100">
                     <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,*,*">
                         <!--Date Information frame-->
                         <Frame Grid.Row="0" Grid.Column="0" Margin="10,0,15,0" WidthRequest="30" Padding="8,0" HasShadow="False" Grid.RowSpan="2" CornerRadius="25" BackgroundColor="#c7e7ff">
@@ -95,8 +95,8 @@
                             </Label>
                         </Frame>
                         <!--Nombre evento-->
-                        <Label Grid.Row="0" Grid.Column="1" FontAttributes="Bold" Text="Torneo de Futbol" FontSize="21"/>
-                        <Label Grid.Row="1" Grid.Column="1" Text="by LMD" TextColor="#a4a5b0"/>
+                        <Label Grid.Row="0" Grid.Column="1" FontAttributes="Bold" Text="Torneo de Basket" FontSize="21"/>
+                        <Label Grid.Row="1" Grid.Column="1" Text="by UniSport" TextColor="#a4a5b0"/>
                         <!--Hora-->
                         <Image Grid.Row="2" Grid.Column="0" HorizontalOptions="Start" Source="Clock" Margin="13,0,0,0" HeightRequest="35"/>
                         <Label Grid.Row="2" Grid.Column="1" VerticalOptions="Center" Margin="-25,0,0,0" Text="08.00am - 18.00pm" FontSize="16" TextColor="#5855b6" FontAttributes="Bold"/>
