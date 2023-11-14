@@ -13,7 +13,7 @@
         <!-- Contenido de la primera columna -->
         <StackLayout Grid.Column="0">
             <Button Text="DEPORTES" FontFamily="Lato" BackgroundColor="#6BBAFF" Margin="8" WidthRequest="150" HeightRequest="165" FontAttributes="Bold" CornerRadius="12" TextColor="#ffffff"></Button>
-            <Button Text="EVENTOS" BackgroundColor="#7052FF" Margin="8" WidthRequest="150" HeightRequest="165" FontAttributes="Bold" CornerRadius="12" TextColor="#ffffff"></Button>
+            <Button Text="EVENTOS" Clicked="btnEventos_Clicked" BackgroundColor="#7052FF" Margin="8" WidthRequest="150" HeightRequest="165" FontAttributes="Bold" CornerRadius="12" TextColor="#ffffff"></Button>
            
             <!-- Tus elementos para la primera columna -->
         </StackLayout>

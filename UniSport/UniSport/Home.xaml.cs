@@ -21,6 +21,11 @@ namespace UniSport
             await Navigation.PushAsync(new Noticias());
         }
 
+        private async void btnEventos_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Eventos());
+        }
+
     }
 
 
