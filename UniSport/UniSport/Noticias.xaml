@@ -15,15 +15,17 @@
         <Label Text="Noticias" HorizontalOptions="Center" Margin="8" TextColor="#000000" FontSize="Title" TextDecorations="None"/>
 
         <!-- News Cards -->
-        <CollectionView ItemsSource="{Binding NewsCollection}">
+        <CollectionView ItemsSource="{Binding NewsCollection}" >
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout>
-                        <Frame CornerRadius="10" HasShadow="True" Margin="10">
+                        <Frame CornerRadius="10" HasShadow="True" Margin="10"
+                               >
                             <StackLayout>
                                 <Image Source="{Binding NoticiaImagen}" Aspect="AspectFill" HeightRequest="150" />
                                 <Label Text="{Binding NoticiaTitulo}" FontSize="20" FontAttributes="Bold" Margin="10,5,10,0" />
                                 <Label Text="{Binding NoticiaDescripcion}" FontSize="16" Margin="10,0,10,10" />
+                                <Button Text="Leer mas" Clicked="btnDetalleNoticia_Clicked"/>
                             </StackLayout>
                         </Frame>
                     </StackLayout>

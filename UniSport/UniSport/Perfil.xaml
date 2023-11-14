@@ -36,13 +36,14 @@
                 <Label Text="Correo Electrónico: usuario@universidad.com" FontSize="16" />
                 <Label Text="Fecha de Nacimiento: 01/01/1990" FontSize="16" />
                 <Label Text="Número de Teléfono: (123) 456-7890" FontSize="16" />
+                <Label Text="Carrera: Ingenieria Informatica" FontSize="16" />
             </StackLayout>
 
             <!-- Botón para editar perfil -->
-            <Button Grid.Row="6"  Text="Editar Perfil" HorizontalOptions="FillAndExpand" FontSize="12" TextColor="White" CornerRadius="10" BackgroundColor="#4A4BBD" Margin="15,0,20,15" />
+            <Button Grid.Row="6" Clicked="OnEditarPerfilClicked"  Text="Editar Perfil" HorizontalOptions="FillAndExpand" FontSize="12" TextColor="White" CornerRadius="10" BackgroundColor="#4A4BBD" Margin="15,0,20,15" />
 
 
-            <StackLayout Grid.Row="7" Margin="15">
+            <StackLayout Grid.Row="10" Margin="15">
                 <Button x:Name="btnlogout" 
                     Margin="0,20" 
                     Text="Cerrar Sesion"

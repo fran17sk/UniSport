@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UniSport.DetalleNoticia">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding NoticiaTitulo}" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" Margin="10" />
+            <Image Source="{Binding NoticiaImagen}" Aspect="AspectFill" HeightRequest="200" />
+            <ScrollView>
+                <StackLayout>
+                    <Label Text="Contenido de la Noticia" FontSize="18" FontAttributes="Bold" Margin="10" />
+                    <Label Text="{Binding NoticiaDescripcion}" FontSize="16" Margin="10"/>
+                    <!-- Añade más etiquetas o elementos según sea necesario para mostrar el contenido completo -->
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
