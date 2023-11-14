@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
 namespace UniSport
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -26,6 +27,10 @@ namespace UniSport
             await Navigation.PushAsync(new Eventos());
         }
 
+        private async void btnSalud_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Salud());
+        }
     }
 
 

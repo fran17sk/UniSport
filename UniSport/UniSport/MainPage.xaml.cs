@@ -40,9 +40,9 @@ namespace UniSport
             await Navigation.PushAsync(new OlvideContraseña());
         }
 
-        private void btnsingin_Clicked(object sender, EventArgs e)
+        private async void btnsingin_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new NewUser());
         }
 
         private void btnloginface_Clicked(object sender, EventArgs e)

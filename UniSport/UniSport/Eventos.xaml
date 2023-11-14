@@ -6,68 +6,132 @@
              xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
 >
     <ScrollView VerticalScrollBarVisibility="Never">
-        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,*" BackgroundColor="#F0F1F6">
+        <StackLayout>
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,*" BackgroundColor="#F0F1F6">
 
-            <!-- 1.1 Imagen principal -->
-            <pancake:PancakeView Grid.Row="0" VerticalOptions="Start" IsClippedToBounds="True" CornerRadius="0,0,40,40" HorizontalOptions="FillAndExpand">
-                <Image Source="https://img.freepik.com/foto-gratis/balon-futbol-linea-blanca-estadio_1150-5285.jpg" Aspect="AspectFill" HeightRequest="370"/>
-            </pancake:PancakeView>
-            <!-- 1.1 Heart -->
-            <Image Grid.Row="0" Source="_Heart" Margin="0,35,20,0" HeightRequest="35" WidthRequest="35" HorizontalOptions="End" VerticalOptions="Start"/>
+                <!-- 1.1 Imagen principal -->
+                <pancake:PancakeView Grid.Row="0" VerticalOptions="Start" IsClippedToBounds="True" CornerRadius="0,0,40,40" HorizontalOptions="FillAndExpand">
+                    <Image Source="https://img.freepik.com/foto-gratis/balon-futbol-linea-blanca-estadio_1150-5285.jpg" Aspect="AspectFill" HeightRequest="370"/>
+                </pancake:PancakeView>
+                <!-- 1.1 Heart -->
+                <Image Grid.Row="0" Source="_Heart" Margin="0,35,20,0" HeightRequest="35" WidthRequest="35" HorizontalOptions="End" VerticalOptions="Start"/>
 
-            <!-- 2. Event Description -->
+                <!-- 2. Event Description -->
 
-            <!-- 2.1 Fashion Fair frame 2020-->
-            <Frame Grid.Row="1" BackgroundColor="White" HasShadow="False" Margin="30,-100,30,20" CornerRadius="20" HeightRequest="170">
-                <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,*,*">
-                    <!--Date Information frame-->
-                    <Frame Grid.Row="0" Grid.Column="0" Margin="10,0,15,0" WidthRequest="30" Padding="8,0" HasShadow="False" Grid.RowSpan="2" CornerRadius="25" BackgroundColor="#c7e7ff">
-                        <Label VerticalTextAlignment="Center" >
+                <!-- 2.1 Fashion Fair frame 2020-->
+                <Frame Grid.Row="1" BackgroundColor="White" HasShadow="False" Margin="30,-100,30,20" CornerRadius="20" HeightRequest="100">
+                    <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,*,*">
+                        <!--Date Information frame-->
+                        <Frame Grid.Row="0" Grid.Column="0" Margin="10,0,15,0" WidthRequest="30" Padding="8,0" HasShadow="False" Grid.RowSpan="2" CornerRadius="25" BackgroundColor="#c7e7ff">
+                            <Label VerticalTextAlignment="Center" >
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Grid.Row="0" Text="20&#10;" FontSize="22" FontAttributes="Bold" TextColor="#fc717a"/>
+                                        <Span Grid.Row="1" Text="Oct." TextColor="#7ba3bf" FontAttributes="Bold" FontSize="14"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </Frame>
+                        <!--Nombre evento-->
+                        <Label Grid.Row="0" Grid.Column="1" FontAttributes="Bold" Text="Torneo de Futbol" FontSize="21"/>
+                        <Label Grid.Row="1" Grid.Column="1" Text="by UnoSport" TextColor="#a4a5b0"/>
+                        <!--Hora-->
+                        <Image Grid.Row="2" Grid.Column="0" HorizontalOptions="Start" Source="Clock" Margin="13,0,0,0" HeightRequest="35"/>
+                        <Label Grid.Row="2" Grid.Column="1" VerticalOptions="Center" Margin="-25,0,0,0" Text="08.00am - 18.00pm" FontSize="16" TextColor="#5855b6" FontAttributes="Bold"/>
+                        <!--ubicacion-->
+                        <Image Grid.Row="3" Grid.Column="0" HorizontalOptions="Start" Source="Location" Margin="13,0,0,0" HeightRequest="35"/>
+                        <Label Grid.Row="3" Grid.Column="1" VerticalOptions="Center" Margin="-25,0,0,0" Text="Campus Castañares" FontSize="16" TextColor="#5855b6" FontAttributes="Bold"/>
+                    </Grid>
+                </Frame>
+
+                <!-- Detalles-->
+                <Label Margin="30,0" Grid.Row="2" FontSize="22" Text="Detalles" FontAttributes="Bold"/>
+                <!-- Descripcion-->
+                <Label Margin="30,0" Grid.Row="3" TextColor="#5f6477" Text="Torneo realizado por UniSport, consta de un campeonato relampago, eliminacion directa. Solo se permiten 16 equipos."/>
+                <!-- Mas-->
+                <Label Margin="30,10,30,0" Grid.Row="4" FontSize="17" Text="Leer mas" TextColor="#5855b6" FontAttributes="Bold"/>
+
+
+
+                <!--Nombre evento-->
+                <pancake:PancakeView Grid.Row="6"  BackgroundColor="#dddddd" VerticalOptions="EndAndExpand"  CornerRadius="40,40,0,0" HorizontalOptions="FillAndExpand" Margin="0,30 ,0,0">
+                    <StackLayout HeightRequest="100" Orientation="Horizontal">
+                        <Label Margin="30,20" HorizontalOptions="StartAndExpand">
                             <Label.FormattedText>
                                 <FormattedString>
-                                    <Span Grid.Row="0" Text="20&#10;" FontSize="22" FontAttributes="Bold" TextColor="#fc717a"/>
-                                    <Span Grid.Row="1" Text="Oct." TextColor="#7ba3bf" FontAttributes="Bold" FontSize="14"/>
+                                    <Span Text="$50&#10;" FontAttributes="Bold" FontSize="25" TextColor="#fe8b87"/>
+                                    <Span Text="Por participante" FontSize="15" TextColor="#fe8b87"/>
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
-                    </Frame>
-                    <!--Nombre evento-->
-                    <Label Grid.Row="0" Grid.Column="1" FontAttributes="Bold" Text="Torneo de Futbol" FontSize="21"/>
-                    <Label Grid.Row="1" Grid.Column="1" Text="by LMD" TextColor="#a4a5b0"/>
-                    <!--Hora-->
-                    <Image Grid.Row="2" Grid.Column="0" HorizontalOptions="Start" Source="Clock" Margin="13,0,0,0" HeightRequest="35"/>
-                    <Label Grid.Row="2" Grid.Column="1" VerticalOptions="Center" Margin="-25,0,0,0" Text="08.00am - 18.00pm" FontSize="16" TextColor="#5855b6" FontAttributes="Bold"/>
-                    <!--ubicacion-->
-                    <Image Grid.Row="3" Grid.Column="0" HorizontalOptions="Start" Source="Location" Margin="13,0,0,0" HeightRequest="35"/>
-                    <Label Grid.Row="3" Grid.Column="1" VerticalOptions="Center" Margin="-25,0,0,0" Text="Campus Castañares" FontSize="16" TextColor="#5855b6" FontAttributes="Bold"/>
-                </Grid>
-            </Frame>
+                        <Button BackgroundColor="#4c4baa" VerticalOptions="Center" HeightRequest="60" WidthRequest="130" Text="Ingresar" FontAttributes="Bold" TextColor="White" CornerRadius="25" Margin="0,0,20,0"/>
+                    </StackLayout>
+                </pancake:PancakeView>
 
-            <!-- Detalles-->
-            <Label Margin="30,0" Grid.Row="2" FontSize="22" Text="Detalles" FontAttributes="Bold"/>
-            <!-- Descripcion-->
-            <Label Margin="30,0" Grid.Row="3" TextColor="#5f6477" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."/>
-            <!-- Mas-->
-            <Label Margin="30,10,30,0" Grid.Row="4" FontSize="17" Text="Leer mas" TextColor="#5855b6" FontAttributes="Bold"/>
+            </Grid>
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,*" BackgroundColor="#F0F1F6">
+
+                <!-- 1.1 Imagen principal -->
+                <pancake:PancakeView Grid.Row="0" VerticalOptions="Start" IsClippedToBounds="True" CornerRadius="0,0,40,40" HorizontalOptions="FillAndExpand">
+                    <Image Source="https://img.freepik.com/foto-gratis/balon-futbol-linea-blanca-estadio_1150-5285.jpg" Aspect="AspectFill" HeightRequest="370"/>
+                </pancake:PancakeView>
+                <!-- 1.1 Heart -->
+                <Image Grid.Row="0" Source="_Heart" Margin="0,35,20,0" HeightRequest="35" WidthRequest="35" HorizontalOptions="End" VerticalOptions="Start"/>
+
+                <!-- 2. Event Description -->
+
+                <!-- 2.1 Fashion Fair frame 2020-->
+                <Frame Grid.Row="1" BackgroundColor="White" HasShadow="False" Margin="30,-100,30,20" CornerRadius="20" HeightRequest="170">
+                    <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,*,*">
+                        <!--Date Information frame-->
+                        <Frame Grid.Row="0" Grid.Column="0" Margin="10,0,15,0" WidthRequest="30" Padding="8,0" HasShadow="False" Grid.RowSpan="2" CornerRadius="25" BackgroundColor="#c7e7ff">
+                            <Label VerticalTextAlignment="Center" >
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Grid.Row="0" Text="20&#10;" FontSize="22" FontAttributes="Bold" TextColor="#fc717a"/>
+                                        <Span Grid.Row="1" Text="Oct." TextColor="#7ba3bf" FontAttributes="Bold" FontSize="14"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </Frame>
+                        <!--Nombre evento-->
+                        <Label Grid.Row="0" Grid.Column="1" FontAttributes="Bold" Text="Torneo de Futbol" FontSize="21"/>
+                        <Label Grid.Row="1" Grid.Column="1" Text="by LMD" TextColor="#a4a5b0"/>
+                        <!--Hora-->
+                        <Image Grid.Row="2" Grid.Column="0" HorizontalOptions="Start" Source="Clock" Margin="13,0,0,0" HeightRequest="35"/>
+                        <Label Grid.Row="2" Grid.Column="1" VerticalOptions="Center" Margin="-25,0,0,0" Text="08.00am - 18.00pm" FontSize="16" TextColor="#5855b6" FontAttributes="Bold"/>
+                        <!--ubicacion-->
+                        <Image Grid.Row="3" Grid.Column="0" HorizontalOptions="Start" Source="Location" Margin="13,0,0,0" HeightRequest="35"/>
+                        <Label Grid.Row="3" Grid.Column="1" VerticalOptions="Center" Margin="-25,0,0,0" Text="Campus Castañares" FontSize="16" TextColor="#5855b6" FontAttributes="Bold"/>
+                    </Grid>
+                </Frame>
+
+                <!-- Detalles-->
+                <Label Margin="30,0" Grid.Row="2" FontSize="22" Text="Detalles" FontAttributes="Bold"/>
+                <!-- Descripcion-->
+                <Label Margin="30,0" Grid.Row="3" TextColor="#5f6477" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."/>
+                <!-- Mas-->
+                <Label Margin="30,10,30,0" Grid.Row="4" FontSize="17" Text="Leer mas" TextColor="#5855b6" FontAttributes="Bold"/>
 
 
 
-            <!--Nombre evento-->
-            <pancake:PancakeView Grid.Row="6"  BackgroundColor="#dddddd" VerticalOptions="EndAndExpand"  CornerRadius="40,40,0,0" HorizontalOptions="FillAndExpand" Margin="0,30 ,0,0">
-                <StackLayout HeightRequest="100" Orientation="Horizontal">
-                    <Label Margin="30,20" HorizontalOptions="StartAndExpand">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="$59.90&#10;" FontAttributes="Bold" FontSize="25" TextColor="#fe8b87"/>
-                                <Span Text="Per participant" FontSize="15" TextColor="#fe8b87"/>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                    <Button BackgroundColor="#4c4baa" VerticalOptions="Center" HeightRequest="60" WidthRequest="130" Text="Volver" FontAttributes="Bold" TextColor="White" CornerRadius="25" Margin="0,0,20,0"/>
-                </StackLayout>
-            </pancake:PancakeView>
+                <!--Nombre evento-->
+                <pancake:PancakeView Grid.Row="6"  BackgroundColor="#dddddd" VerticalOptions="EndAndExpand"  CornerRadius="40,40,0,0" HorizontalOptions="FillAndExpand" Margin="0,30 ,0,0">
+                    <StackLayout HeightRequest="100" Orientation="Horizontal">
+                        <Label Margin="30,20" HorizontalOptions="StartAndExpand">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="GRATIS" FontAttributes="Bold" FontSize="25" TextColor="#fe8b87"/>
+ 
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                        <Button BackgroundColor="#4c4baa" VerticalOptions="Center" HeightRequest="60" WidthRequest="130" Text="Ingresar" FontAttributes="Bold" TextColor="White" CornerRadius="25" Margin="0,0,20,0"/>
+                    </StackLayout>
+                </pancake:PancakeView>
 
-        </Grid>
+            </Grid>
+        </StackLayout>
     </ScrollView>
 
 

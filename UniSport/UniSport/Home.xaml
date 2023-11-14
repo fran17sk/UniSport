@@ -3,26 +3,38 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="UniSport.Home"
              Title="Home"
+             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              IconImageSource="">
     <Grid >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-
-        <!-- Contenido de la primera columna -->
-        <StackLayout Grid.Column="0">
-            <Button Text="DEPORTES" FontFamily="Lato" BackgroundColor="#6BBAFF" Margin="8" WidthRequest="150" HeightRequest="165" FontAttributes="Bold" CornerRadius="12" TextColor="#ffffff"></Button>
-            <Button Text="EVENTOS" Clicked="btnEventos_Clicked" BackgroundColor="#7052FF" Margin="8" WidthRequest="150" HeightRequest="165" FontAttributes="Bold" CornerRadius="12" TextColor="#ffffff"></Button>
-           
-            <!-- Tus elementos para la primera columna -->
+        <StackLayout Grid.Row="0">
+            <pancake:PancakeView Grid.Row="0" VerticalOptions="Start" IsClippedToBounds="True" CornerRadius="0,0,40,40" HorizontalOptions="FillAndExpand">
+                <Image Source="deport.jpg" Aspect="AspectFill" HeightRequest="370"/>
+            </pancake:PancakeView>
+            <Button BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="80" WidthRequest="250" FontSize="53" Text="UNISPORT" FontAttributes="Bold" TextColor="White" CornerRadius="25" Margin="0,-240,0,0"/>
         </StackLayout>
 
-        <!-- Contenido de la segunda columna -->
-        <StackLayout Grid.Column="1">
-            <Button Text="NOTICIAS" Clicked="btnNoticias_Clicked" BackgroundColor="#FF5F5F" Margin="8" WidthRequest="150" HeightRequest="165" FontAttributes="Bold" CornerRadius="12" TextColor="#ffffff"></Button>
-            <Button Text="SALUD +" BackgroundColor="#FFA34A" Margin="8" WidthRequest="150" HeightRequest="165" FontAttributes="Bold" CornerRadius="12" TextColor="#ffffff"></Button>
-            <!-- Tus elementos para la segunda columna -->
-        </StackLayout>
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+
+            </Grid.ColumnDefinitions>
+            <!-- Contenido de la primera columna -->
+            <StackLayout Grid.Column="0" Grid.Row="1">
+                <Button Text="DEPORTES" FontFamily="Lato" BackgroundColor="#6BBAFF" Margin="8" WidthRequest="150" HeightRequest="165" FontAttributes="Bold" CornerRadius="12" TextColor="#ffffff"></Button>
+                <Button Text="EVENTOS" Clicked="btnEventos_Clicked" BackgroundColor="#7052FF" Margin="8" WidthRequest="150" HeightRequest="165" FontAttributes="Bold" CornerRadius="12" TextColor="#ffffff"></Button>
+
+                <!-- Tus elementos para la primera columna -->
+            </StackLayout>
+
+            <!-- Contenido de la segunda columna -->
+            <StackLayout Grid.Column="1" Grid.Row="1">
+                <Button Text="NOTICIAS" Clicked="btnNoticias_Clicked" BackgroundColor="#FF5F5F" Margin="8" WidthRequest="150" HeightRequest="165" FontAttributes="Bold" CornerRadius="12" TextColor="#ffffff"></Button>
+                <Button Text="SALUD +" Clicked="btnSalud_Clicked" BackgroundColor="#FFA34A" Margin="8" WidthRequest="150" HeightRequest="165" FontAttributes="Bold" CornerRadius="12" TextColor="#ffffff"></Button>
+                <!-- Tus elementos para la segunda columna -->
+            </StackLayout>
+        </Grid>
     </Grid>
 </ContentPage>
