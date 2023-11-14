@@ -22,5 +22,10 @@ namespace UniSport
             Navigation.PopAsync();
         }
 
+        private async void OnEditarPerfilClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new EditarPerfil());
+        }
+
     }
 }
